@@ -1,0 +1,40 @@
+Proyecto: Sistema de Diagnóstico Predictivo para Talleres de Automoción
+Objetivos
+Identificar y definir tareas:
+
+Desarrollar un sistema capaz de predecir fallos en vehículos de forma anticipada, basándose en el análisis de datos de sensores y registros históricos.
+Proporcionar recomendaciones de mantenimiento preventivo personalizadas para cada vehículo.
+Optimizar los procesos de diagnóstico y reparación en los talleres, reduciendo tiempos de inactividad y costos.
+Seleccionar herramienta de IA:
+
+Herramienta: TensorFlow o PyTorch.
+Justificación: Ambas son frameworks de deep learning de código abierto, altamente escalables y con una gran comunidad de usuarios. Ofrecen una amplia gama de herramientas y modelos preentrenados que facilitan el desarrollo de soluciones de IA.
+Describir dataset necesario:
+
+Tipo de Datos: Datos de sensores de vehículos (temperatura, presión, velocidad, etc.), registros de mantenimiento y reparaciones anteriores.
+Fuente de Datos: Datos recopilados de los vehículos atendidos en la red de talleres.
+Cantidad de Datos: Grandes volúmenes de datos históricos para entrenar modelos predictivos robustos.
+
+Etiquetado: Los datos requerirán etiquetado para identificar los casos en los que se produjo una falla. Se utilizarán registros históricos de reparaciones para crear etiquetas binarias (falla/no falla).
+Contribución: El dataset permitirá entrenar modelos capaces de identificar patrones anómalos en los datos de sensores que preceden a una falla, permitiendo así realizar predicciones precisas.
+
+Seleccionar modelos de Deep Learning:
+Modelos: Redes Neuronales Recurrentes (RNNs), específicamente LSTM y GRU.
+Razones: Las RNNs son ideales para modelar secuencias de datos, como las series temporales de sensores. LSTM y GRU son variantes de RNN que resuelven el problema del desvanecimiento del gradiente y pueden capturar dependencias a largo plazo en los datos.
+
+Proceso de entrenamiento:
+
+Preprocesamiento: Limpieza de datos, normalización, manejo de valores faltantes y selección de características relevantes.
+Ingeniería de características: Creación de nuevas características a partir de las existentes (por ejemplo, estadísticas descriptivas, transformaciones no lineales) para mejorar la capacidad predictiva del modelo.
+Entrenamiento: Utilización de algoritmos de optimización como Adam o RMSprop para minimizar la función de pérdida (por ejemplo, error cuadrático medio para regresión o entropía cruzada para clasificación).
+
+Validación: Evaluación del modelo en un conjunto de datos de validación para ajustar hiperparámetros y evitar el sobreajuste.
+Enfoque de implementación:
+
+Plataforma: Despliegue en una plataforma en la nube (AWS, GCP, Azure) para facilitar la escalabilidad y accesibilidad.
+
+Interfaz: Desarrollo de una interfaz intuitiva para que los mecánicos puedan cargar los datos de nuevos vehículos, visualizar las predicciones y recibir recomendaciones de mantenimiento.
+
+Integración: Integración del sistema con los sistemas existentes de gestión de talleres para automatizar los procesos y mejorar la eficiencia. Con una interfaz que permita la carga y análisis de nuevos datos de sensores.
+
+Monitoreo y Mejora Continua: Monitorear el rendimiento del sistema y actualizar el modelo con nuevos datos para mantener su precisión.
