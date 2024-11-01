@@ -38,3 +38,24 @@ Interfaz: Desarrollo de una interfaz intuitiva para que los mecánicos puedan ca
 Integración: Integración del sistema con los sistemas existentes de gestión de talleres para automatizar los procesos y mejorar la eficiencia. Con una interfaz que permita la carga y análisis de nuevos datos de sensores.
 
 Monitoreo y Mejora Continua: Monitorear el rendimiento del sistema y actualizar el modelo con nuevos datos para mantener su precisión.
+
+9. Beneficios para el Cliente
+Eficiencia: Reducción del tiempo necesario para diagnosticar problemas vehiculares.
+Precisión: Aumento en la precisión de los diagnósticos y recomendaciones de mantenimiento.
+Prevención: Identificación de problemas potenciales antes de que se conviertan en fallos graves.
+
+Ejm. modelo LSTM para entrenar con los datos de sensores:
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Supongamos que X_train y y_train son nuestros datos de entrenamiento
+model = Sequential()
+model.add(LSTM(50, return_sequences=True, input_shape=(X_train.shape[1], X_train.shape[2])))
+model.add(LSTM(50))
+model.add(Dense(1))
+
+model.compile(optimizer='adam', loss='mse')
+model.fit(X_train, y_train, epochs=50, batch_size=64, validation_split=0.2)
+
